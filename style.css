@@ -1,0 +1,255 @@
+/* Web Fonts -------------------- */
+
+@font-face {
+  font-family: 'Abolition Regular';
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+/* Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  color: #454959;
+  margin: 0;
+  padding: 0;
+  font: 300 1em/1.5 'Work Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+h1 {  
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(0,0,0,.8);
+  margin: .5rem 0 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0 0 .5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; /* 34px */
+}
+
+img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul, ol {
+  margin: 1.5rem 0;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+a {
+  color: #ce6f42;
+  text-decoration: none;
+}
+
+/* Navbar */
+
+nav {
+  position:fixed;
+  width:100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 32px;
+}
+
+nav ul li a {
+  color:  #ce6f42;
+  font-size: 28px;
+  transition: font-size 0.2s, color 1s;
+}
+
+nav ul li a:hover {
+  color:white;
+  font-size:32px;
+}
+
+
+/* Menu icon and close icon */
+
+.menu-icon,
+.close-icon {
+  z-index: 100;
+  position: fixed;
+  right:24px;
+  top:10px;
+  color:white;
+  font-size:26px;
+  padding: 4px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity:0;
+  transition: all .5s;
+}
+
+.menu-icon.active,
+.close-icon.active {
+  opacity: 1;
+  top: 24px;
+  pointer-events: auto;
+}
+
+
+/* Main Menu */
+
+.main-menu {
+  height:100vh;
+  background:  #ce6f42;
+  top:100vh;
+  transition: all .4s;
+}
+
+.main-menu ul {
+  display: flex;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-menu ul li {
+  margin: 24px 0;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.main-menu ul li a {
+  color:white;
+  font-size:32px;
+  text-decoration: none;
+  transition: all 0s;
+}
+
+.main-menu ul li a:hover {
+  color:black;
+}
+
+
+.main-menu.active {
+  top:0;
+}
+
+.main-menu.active ul li {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+/* Main Styles --------------------- */
+header, footer {
+  text-align: center; 
+}
+
+header {
+  background: url('../img/elmaddina.png') no-repeat center;
+  background-color: #22212070;
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 90vh;
+  color: white;
+}
+.title {
+  bottom: 1rem;
+  letter-spacing: .05rem;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  border-bottom: 1px solid #987;
+  margin: auto;
+  max-width: 1024px;
+}
+.callout {
+  width: 250px;
+  padding: .25rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(85,68,51,.5);
+  margin: 1rem auto;
+  display: block;
+  background: linear-gradient(#CC4E13 0%, #E3652B 50%, #DC5E23 51%, #F3753B 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.callout:hover {
+  background: linear-gradient(#BC3E03 0%, #D3551B 50%, #CC4E13 51%, #E3652B 100%);
+}
+#video-container {  
+  border-top: 12px solid #F3753B;
+  border-bottom: 12px solid #F3753B;
+  border-radius: 10px;
+}
+
+
+.column:first-child {
+  padding-bottom: 2rem;
+}
+.column img {
+  border-top: 6px solid #F3753B;
+}
+/* footer */
+footer {
+  font-size: .9rem;
+  padding: 3rem 1rem 6rem;
+}
+
+
+@media screen and (min-width: 720px) {
+  header {
+    padding: 20vh 0;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  
+  .column {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px;
+  }
+  .column:first-child {
+    margin-right: 4%;
+    padding-bottom: 0;
+  }
+}
